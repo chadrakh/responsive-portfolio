@@ -1,0 +1,99 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+</style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* navigation bar Section */
+#navbar{
+    position: relative;
+    background-color: #DC143C;
+    line-height: 50px;
+    padding:8px 20px;
+}
+#navbar .headerCTA {
+    display:inline-block;
+    color:#ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    margin: 0 15px;
+}
+#navbar .headerCTA:hover {
+    
+}
+/* End navigation bar Section */
+
+/* landing Section */
+#landing{
+    background-image: url(../assets/laptopBg1.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#landing::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color: #000000;
+    opacity: .7;
+    z-index: -1;
+}
+#landing h1{
+    display: block;
+    width:fit-content;
+    font-size: 4rem;
+    position: relative;
+    color:#ffffff;    
+}
+#landing .cta{
+    display:inline-block;
+    padding: 10px 30px;
+    color: #DC143C;
+    background-color: transparent;
+    border: 2px solid #DC143C;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: 0 10px 0 10px;
+    transition: .3s ease background-color;
+}
+#landing .ctaMain{
+    display:inline-block;
+    align-items: center;
+    padding: 10px 30px;
+    color: #DC143C;
+    background-color: transparent;
+    border: 2px solid #DC143C;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: 0 10px 0 10px;
+    transition: .3s ease background-color;
+}
+#landing .cta:hover{
+    color: #ffffff;
+    background-color: #DC143C;
+}
+/* End landing Section */
