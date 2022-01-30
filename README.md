@@ -1,2 +1,2 @@
-My Graphic Design Portfolio
-A test area for me to build a web portfolio written using HTML, CSS and JavaScript.
+Welcome to my portfolio
+A test area for web development.
