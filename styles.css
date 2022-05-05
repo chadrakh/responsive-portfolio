@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #12171e;
+    /* Remove scroll */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------------------------------------- */
+.anchor {
+    visibility: hidden;
+}
+
+/* Navigation Styling */
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #080b10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3.5rem;
+}
+
+.navbar-logo__container {
+    margin-inline-start: 3rem;
+    padding: 1rem;
+}
+
+.navbar-logo {
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+.navbar-logo:hover {
+    color: #f6d30e;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.navbar-link__container {
+    margin-inline-end: 3rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navbar-link, .fa-icon {
+    padding-right: 1rem;
+    font-size: 20px;
+}
+
+/* Page Layout */
+#content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+/* Landing Styling */
+
+/* Section Styling */
+.section-container {
+    width: min(100% - 2rem, 1200px);
+    height: 500px;
+    margin: 10px 0;
+    background-color: #333;
+}
+
+.stdSection {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Styling */
