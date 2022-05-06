@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -15,11 +15,11 @@ body {
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
     background-color: #12171e;
-    /* Remove scroll */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* Remove scrollbar (IE 10+) */
+    scrollbar-width: none;  /* Remove scrolbar (Firefox) */
 }
 
+/* Remove scrollbar (Chrome) */
 body::-webkit-scrollbar {
     display: none;
 }
@@ -38,12 +38,12 @@ img {
     height: auto;
 }
 
-/* ---------------------------------------- */
+/* ---------------- NAVIGATION ANCHORS ---------------- */
 .anchor {
     visibility: hidden;
 }
 
-/* Navigation Styling */
+/* ---------------- NAVIGATION BAR STYLING ---------------- */
 #navbar {
     display: flex;
     flex-direction: row;
@@ -85,7 +85,7 @@ img {
     font-size: 20px;
 }
 
-/* Page Layout */
+/* ---------------- PAGE LAYOUT STYLING ---------------- */
 #content-container {
     width: 100%;
     display: flex;
@@ -95,19 +95,52 @@ img {
     padding-top: 4rem;
 }
 
-/* Landing Styling */
-
-/* Section Styling */
+/* ---------------- SECTION STYLING ---------------- */
+/* Reusable Section Styles  */
 .section-container {
-    width: min(100% - 2rem, 1200px);
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    /* width: min(100% - 2rem, 1200px;);
+    height: 500px; */
+    width: min(100% - 2rem, 80vw);
+    height: 100vh;
     margin: 10px 0;
-    background-color: #333;
+    /* background-color: #333; */
 }
 
-.stdSection {
-    width: 100%;
-    height: auto;
+.separation {
+    margin-bottom: 2rem;
 }
 
-/* Footer Styling */
+/* Content-Specific Section Styles */
+
+
+/* ---------------- LANDING STYLING ---------------- */
+.landing {
+    justify-content: center;
+    width: 40vw;
+}
+
+.section-landing {
+    text-align: center;
+}
+
+.section-landing__preTitle {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-landing__title {
+    font-size: 96px;
+    font-weight: 600;
+
+}
+
+.section-landing__content {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+/* ---------------- Footer Styling ---------------- */
