@@ -8,6 +8,8 @@
     <title>Chadrak Holondo - Web Developer</title>
     <link rel="icon" href="">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/03dbc5c5be.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
@@ -18,6 +20,7 @@
             <a href="#top" class="navbar-logo" href="">CHADRAK HOLONDO</a>
         </div>
         <ul class="navbar-link__container">
+            <li class="navbar-link"><a class="active" href="#about">About Me</a></li>
             <li class="navbar-link"><a href="#projects">Projects</a></li>
             <li class="navbar-link"><a href="#experience">Experience</a></li>
             <li class="navbar-link"><a href="#contact">Contact</a></li>
@@ -32,20 +35,29 @@
         <!-- Landing -->
         <div id="landing" class="section-container landing">
             <section class="section-landing">
-                <div class="section-landing__preTitle">Front End Developer (and graphic designer)</div>
-                <div class="section-landing__title separation">Get to know me.</div>
-                <div class="section-landing__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="section-landing__preTitle spaced marginBottom">48Visuals</div>
+                <div class="section-landing__title marginBottom">Front End Developer</div>
+                <div class="section-landing__content spaced">Chadrak Holondo</div>
                 <div class="section-landing__buttons">
-                    <button>Click Me</button>
-                    <button>Click Me</button>
+                    <button class="buttonPrimary"><span>DIVE IN</span></button>
                 </div>
             </section>
         </div>
+
+        <!-- About Me -->
+        <div id="about" class="section-container">
+            <section class="section-about">
+                <div class="section-about__title">About Me</div>
+                <div class="section-about__content"></div>
+            </section>
+        </div>
+
 
         <!-- Personal Projects -->
         <div id="projects" class="section-container">
             <section class="section-projects">
                 <div class="section-projects__title">Projects</div>
+                <div class="section-projects__content"></div>
             </section>
         </div>
 
@@ -53,6 +65,7 @@
         <div id="experience" class="section-container">
             <section class="section-experience">
                 <div class="section-experience__title">Experience</div>
+                <div class="section-experience_content"></div>
             </section>
         </div>
 
@@ -60,6 +73,7 @@
         <div id="contact" class="section-container">
             <section class="section-contact">
                 <div class="section-contact_title">Get in touch</div>
+                <div class="section-contact__content"></div>
             </section>
         </div>
     </div>
@@ -68,9 +82,6 @@
     <footer id="footer">
         <section class="footer"></section>
     </footer>
-
-    <script src="./script.js" defer="defer"></script>
-    <script src="https://kit.fontawesome.com/03dbc5c5be.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

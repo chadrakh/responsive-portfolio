@@ -12,9 +12,9 @@ html {
 
 body {
     color: #ffffff;
-    font-size: 18px;
+    font-size: var(--regular);
     font-family: "Montserrat", sans-serif;
-    background-color: #12171e;
+    background-color: var(--colourBackground);
     -ms-overflow-style: none;  /* Remove scrollbar (IE 10+) */
     scrollbar-width: none;  /* Remove scrolbar (Firefox) */
 }
@@ -38,6 +38,26 @@ img {
     height: auto;
 }
 
+:root {
+    /* COLOUR PALETTE */
+    --colourBackground: #12171e;
+    --colourBackgroundAlt: #080b10;
+    --colourPrimary: #f6d30e;
+    --colourSecondary: #faeea9;
+
+    /* FONT STYLING */
+    --bold: 700;
+    --semi-bold: 600;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
+
+    --regular: 18px;
+    --medium: 20px;
+    --subheading: 26px;
+    --heading: 26px;
+}
+
 /* ---------------- NAVIGATION ANCHORS ---------------- */
 .anchor {
     visibility: hidden;
@@ -48,7 +68,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #080b10;
+    background-color: var(--colourBackgroundAlt);
     position: fixed;
     top: 0;
     width: 100%;
@@ -62,13 +82,13 @@ img {
 
 .navbar-logo {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: var(--bold);
     transition: 0.3s;
     
 }
 
 .navbar-logo:hover {
-    color: #f6d30e;
+    color: var(--colourPrimary);
     font-size: 20px;
     transition: 0.3s;
 }
@@ -85,6 +105,12 @@ img {
     font-size: 20px;
 }
 
+.navbar-link a.active:hover {
+    padding-bottom: 0.2rem; 
+    border-bottom: 2px solid #eeeeee;
+    transition: 0.5s;
+}
+
 /* ---------------- PAGE LAYOUT STYLING ---------------- */
 #content-container {
     width: 100%;
@@ -93,6 +119,75 @@ img {
     justify-content: center;
     align-items: center;
     padding-top: 4rem;
+}
+
+/* ---------------- BUTTON STYLING ---------------- */
+/* --- Button Primary */
+.buttonPrimary {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    margin: 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 0;
+    box-sizing: content-box;
+    border: 2px solid transparent;
+}
+
+.buttonPrimary::before, .buttonPrimary::after, span::before, span::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.buttonPrimary::before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition: 0.4s all;
+}
+.buttonPrimary::after {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transition: 0.4s all;
+}
+
+.buttonPrimary span {
+    font-size: var(--medium);
+}
+
+.buttonPrimary span::before {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transition: 0.4s all;
+}
+
+.buttonPrimary span::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transition: 0.4s all;
+}
+
+.buttonPrimary:hover::before, .buttonPrimary:hover::after {
+    width: 100px;
+    height: 30px;
+}
+
+.buttonPrimary:hover span::before, .buttonPrimary:hover span::after {
+    width: 100px;
+    height: 30px;
 }
 
 /* ---------------- SECTION STYLING ---------------- */
@@ -108,8 +203,16 @@ img {
     /* background-color: #333; */
 }
 
-.separation {
-    margin-bottom: 2rem;
+.marginBottom {
+    margin-bottom: 1.5rem;
+}
+
+.marginBottom2 {
+    margin-bottom: 3rem;
+}
+
+.spaced {
+    letter-spacing: 0.5rem;
 }
 
 /* Content-Specific Section Styles */
@@ -118,7 +221,7 @@ img {
 /* ---------------- LANDING STYLING ---------------- */
 .landing {
     justify-content: center;
-    width: 40vw;
+    width: 60vw;
 }
 
 .section-landing {
@@ -127,19 +230,22 @@ img {
 
 .section-landing__preTitle {
     font-size: 17px;
-    font-weight: 600;
+    font-weight: var(--light);
     text-transform: uppercase;
+    letter-spacing: 0.5rem;
 }
 
 .section-landing__title {
     font-size: 96px;
-    font-weight: 600;
-
+    font-weight: var(--semi-bold);
+    text-transform: uppercase;
 }
 
 .section-landing__content {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: var(--light);
+    text-transform: uppercase;
+    margin-bottom: 5rem;
 }
 
 
