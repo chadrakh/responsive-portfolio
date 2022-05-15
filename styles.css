@@ -89,8 +89,7 @@ img {
 
 .navbar-logo:hover {
     color: var(--colourPrimary);
-    font-size: 20px;
-    transition: 0.3s;
+    transition: 0.3s ease-in;
 }
 
 .navbar-link__container {
@@ -105,10 +104,14 @@ img {
     font-size: 20px;
 }
 
-.navbar-link a.active:hover {
+.navbar-link a {
+    transition: 0.2s ease-out;
+}
+
+.navbar-link a:hover {
     padding-bottom: 0.2rem; 
     border-bottom: 2px solid #eeeeee;
-    transition: 0.5s;
+    transition: 0.2s ease-in;
 }
 
 /* ---------------- PAGE LAYOUT STYLING ---------------- */
@@ -203,6 +206,15 @@ img {
     /* background-color: #333; */
 }
 
+/* Marign Spacing */
+.marginTop {
+    margin-top: 1.5rem;
+}
+
+.marginTop2 {
+    margin-top: 3rem;
+}
+
 .marginBottom {
     margin-bottom: 1.5rem;
 }
@@ -211,8 +223,41 @@ img {
     margin-bottom: 3rem;
 }
 
+.marginLeft {
+    margin-left: 1.5rem;
+}
+
+.marginLeft2 {
+    margin-left: 3rem;
+}
+
+.marginRight {
+    margin-right: 1.5rem;
+}
+
+.marginRight2 {
+    margin-right: 3rem;
+}
+
 .spaced {
     letter-spacing: 0.5rem;
+}
+
+/* Tech Stack Icons */
+#HTML5 {
+    color: #f66632;
+}
+
+#CSS3 {
+    color: #007dc6;
+}
+
+#JavaScript {
+    color: #f7df1e;
+}
+
+#React {
+    color: #7ddfff;
 }
 
 /* Content-Specific Section Styles */
@@ -248,5 +293,45 @@ img {
     margin-bottom: 5rem;
 }
 
+/* ---------------- ABOUT STYLING ---------------- */
+.about {
+    width: 50vw;
+}
+
+.section-about {
+    text-align: left;
+}
+
+.section-about__title {
+    font-size: 40px;
+    font-weight: var(--semi-bold);
+    text-transform: uppercase;
+}
+
+.section-about__content__inner {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: var(--light);
+    margin-bottom: 5rem;
+}
+
+.section-about__stack ul {
+    display: flex;
+    margin: 3.5rem auto;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.section-about__stack ul li {
+    display: inline-block;
+    font-size: 50px;
+}
+
+.section-about__stack img {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
 
 /* ---------------- Footer Styling ---------------- */

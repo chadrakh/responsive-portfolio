@@ -20,9 +20,8 @@
             <a href="#top" class="navbar-logo" href="">CHADRAK HOLONDO</a>
         </div>
         <ul class="navbar-link__container">
-            <li class="navbar-link"><a class="active" href="#about">About Me</a></li>
+            <li class="navbar-link"><a href="#about">About</a></li>
             <li class="navbar-link"><a href="#projects">Projects</a></li>
-            <li class="navbar-link"><a href="#experience">Experience</a></li>
             <li class="navbar-link"><a href="#contact">Contact</a></li>
             <!-- P.S. make media links jiggle later on to bring focus -->
             <li class="fa-icon"><a href="https://github.com/chadrakh"><i class="fa-brands fa-github"></a></i></li>
@@ -47,8 +46,37 @@
         <!-- About Me -->
         <div id="about" class="section-container">
             <section class="section-about">
-                <div class="section-about__title">About Me</div>
-                <div class="section-about__content"></div>
+                <div class="section-about__title marginBottom">About Me</div>
+                <div class="section-about__content__inner">
+                    <div class="section-about__content__container marginRight2">
+                        <div class="content-about__left__para1 marginBottom">
+                            I'm a self-taught programmer, specifically working with HTML, CSS, JavaScript and React. I studied Graphic Design at Nottingham Trent University where I first took an interest in user interfacing during an app building project, which led to me diving into front end development and client-side programming. Front end development, for me, is a way of combining graphic design and code by allowing me to not only design interfaces but also build them up from scratch - the main reason I took a liking to it.
+                        </div>
+                        <div class="content-about__left__para2">
+                            As much as I love coding I also play basketball, design graphics (usually sports related) and binge a concerning amount of anime. From basketball I've also developed an athlete's mindset of always looking to work on my craft and accepting setbacks as a way to learn and grow from the experience.
+                        </div>
+                    </div>
+                    <div class="section-about__content__container">
+                        <button onClick=`${showExperience()}`>Experience</button>
+                        <button onClick=`${showSkills()}`>Skills</button>
+                        <div class="content-about__right__para1 marginBottom">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur praesentium illum cumque ipsa reiciendis magnam fugiat rerum molestias voluptate, quos iusto eligendi incidunt suscipit impedit saepe dolore porro ex sapiente! Beatae voluptatibus vitae illum sapiente voluptatem ipsam alias, autem doloremque? Officiis ad dolores voluptate adipisci minima et, distinctio tempora aliquid iure commodi ex ut doloremque veritatis obcaecati dolore repellat? Fuga maxime esse vel aspernatur omnis amet nostrum non ratione dignissimos, nisi dolor sapiente. Reiciendis soluta harum eaque sed? Itaque tempora ab modi cumque nesciunt sed nemo illum iste pariatur omnis. Reprehenderit officia sit laboriosam ipsum tempore. Saepe veniam earum impedit?
+                        </div>
+                        <div class="content-about__right__para2">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum doloribus repellat suscipit sequi quo. Ut, unde porro alias explicabo molestias, facere tempora rem deleniti quae similique esse. Sed soluta repellat error eveniet tempore accusamus aliquam. Cupiditate sed sint magnam necessitatibus, atque rerum. Numquam atque debitis natus consectetur expedita, id odio.
+                        </div>
+                        <div class="section-about__stack">
+                            <ul>
+                                <li><i id="HTML5" class="fa-brands fa-html5"></i></li>
+                                <li><i id="CSS3" class="fa-brands fa-css3-alt"></i></li>
+                                <li><i id="JavaScript" class="fa-brands fa-js"></i></li>
+                                <li><i id="React" class="fa-brands fa-react"></i></li>
+                                <li><img src="./assets/adobecc.svg" alt="adobecc" /></li>
+                                <li><i id="Figma" class="fa-brands fa-figma"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
 
@@ -58,14 +86,6 @@
             <section class="section-projects">
                 <div class="section-projects__title">Projects</div>
                 <div class="section-projects__content"></div>
-            </section>
-        </div>
-
-        <!-- Education & Experience -->
-        <div id="experience" class="section-container">
-            <section class="section-experience">
-                <div class="section-experience__title">Experience</div>
-                <div class="section-experience_content"></div>
             </section>
         </div>
 
