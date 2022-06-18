@@ -14,7 +14,7 @@ body {
     color: #ffffff;
     font-size: var(--regular);
     font-family: "Montserrat", sans-serif;
-    background-color: var(--colourBackground);
+    background: var(--colourBackground);
     -ms-overflow-style: none;  /* Remove scrollbar (IE 10+) */
     scrollbar-width: none;  /* Remove scrolbar (Firefox) */
 }
@@ -38,9 +38,10 @@ img {
     height: auto;
 }
 
+/* ---------------- GLOBAL STYLING ---------------- */
 :root {
     /* COLOUR PALETTE */
-    --colourBackground: #12171e;
+    --colourBackground: linear-gradient(-60deg, #3D434D, #071B32);
     --colourBackgroundAlt: #080b10;
     --colourPrimary: #f6d30e;
     --colourSecondary: #faeea9;
@@ -58,79 +59,29 @@ img {
     --heading: 26px;
 }
 
-/* ---------------- NAVIGATION ANCHORS ---------------- */
-.anchor {
-    visibility: hidden;
+/* Tech Stack Icons */
+#HTML5 {
+    color: #f66632;
 }
 
-/* ---------------- NAVIGATION BAR STYLING ---------------- */
-#navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--colourBackgroundAlt);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 3.5rem;
+#CSS3 {
+    color: #007dc6;
 }
 
-.navbar-logo__container {
-    margin-inline-start: 3rem;
-    padding: 1rem;
+#JavaScript {
+    color: #f7df1e;
 }
 
-.navbar-logo {
-    font-size: 18px;
-    font-weight: var(--bold);
-    transition: 0.3s;
-    
+#React {
+    color: #7ddfff;
 }
 
-.navbar-logo:hover {
-    color: var(--colourPrimary);
-    transition: 0.3s ease-in;
-}
-
-.navbar-link__container {
-    margin-inline-end: 3rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-}
-
-.navbar-link, .fa-icon {
-    padding-right: 1rem;
-    font-size: 20px;
-}
-
-.navbar-link a {
-    transition: 0.2s ease-out;
-}
-
-.navbar-link a:hover {
-    padding-bottom: 0.2rem; 
-    border-bottom: 2px solid #eeeeee;
-    transition: 0.2s ease-in;
-}
-
-/* ---------------- PAGE LAYOUT STYLING ---------------- */
-#content-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 4rem;
-}
-
-/* ---------------- BUTTON STYLING ---------------- */
 /* --- Button Primary */
 .buttonPrimary {
     position: relative;
     width: 200px;
     height: 60px;
-    margin: 0px;
+    margin: 0;
     background: none;
     border: none;
     cursor: pointer;
@@ -193,104 +144,121 @@ img {
     height: 30px;
 }
 
-/* ---------------- SECTION STYLING ---------------- */
-/* Reusable Section Styles  */
+/* ---------------- NAVIGATION ANCHORS ---------------- */
+.anchor {
+    visibility: hidden;
+}
+
+/* ---------------- NAVIGATION BAR STYLING ---------------- */
+#navbar {
+    width: 100vw;
+    height: 3.5rem;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-logo__container {
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar-logo {
+    font-size: 25px;
+    font-weight: var(--bold);
+}
+
+.navbar-link__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20vw;
+}
+
+.navbar-link {
+    font-size: 22px;
+    transition: 0.2s ease-out;
+}
+
+.navbar-link a:hover {
+    padding-bottom: 0.2rem; 
+    border-bottom: 2px solid #eeeeee;
+    transition: 0.2s ease-in;
+}
+
+/* ---------------- LAYOUT ---------------- */
+.content-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .section-container {
     display: flex;
     flex-direction: column;
-    /* width: min(100% - 2rem, 1200px;);
-    height: 500px; */
     width: min(100% - 2rem, 80vw);
     height: 100vh;
-    margin: 10px 0;
-    /* background-color: #333; */
 }
-
-/* Marign Spacing */
-.marginTop {
-    margin-top: 1.5rem;
-}
-
-.marginTop2 {
-    margin-top: 3rem;
-}
-
-.marginBottom {
-    margin-bottom: 1.5rem;
-}
-
-.marginBottom2 {
-    margin-bottom: 3rem;
-}
-
-.marginLeft {
-    margin-left: 1.5rem;
-}
-
-.marginLeft2 {
-    margin-left: 3rem;
-}
-
-.marginRight {
-    margin-right: 1.5rem;
-}
-
-.marginRight2 {
-    margin-right: 3rem;
-}
-
-.spaced {
-    letter-spacing: 0.5rem;
-}
-
-/* Tech Stack Icons */
-#HTML5 {
-    color: #f66632;
-}
-
-#CSS3 {
-    color: #007dc6;
-}
-
-#JavaScript {
-    color: #f7df1e;
-}
-
-#React {
-    color: #7ddfff;
-}
-
-/* Content-Specific Section Styles */
 
 
 /* ---------------- LANDING STYLING ---------------- */
-.landing {
-    justify-content: center;
-    width: 60vw;
+.section-container__landing {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .section-landing {
-    text-align: center;
+    width: 80vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.section-landing__preTitle {
-    font-size: 17px;
-    font-weight: var(--light);
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
+.section-social {
+    width: 10vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.social-icon {
+    font-size: 2vw;
+    list-style: none;
 }
 
 .section-landing__title {
     font-size: 96px;
-    font-weight: var(--semi-bold);
+    font-weight: var(--bold);
     text-transform: uppercase;
+    color: #0ACF83;
 }
 
-.section-landing__content {
+.section-landing__subtitle {
     font-size: 22px;
     font-weight: var(--light);
     text-transform: uppercase;
-    margin-bottom: 5rem;
+    letter-spacing: 0.5rem;
+}
+
+.navigation-scroll {
+    list-style: none;
+    font-size: 3vw;
+    height: 3vh;
+}
+
+.navigation-scroll:hover {
+    color:#0ACF83;
 }
 
 /* ---------------- ABOUT STYLING ---------------- */
@@ -313,7 +281,6 @@ img {
     justify-content: space-between;
     font-size: 22px;
     font-weight: var(--light);
-    margin-bottom: 5rem;
 }
 
 .section-about__stack ul {
